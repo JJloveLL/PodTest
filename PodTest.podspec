@@ -1,16 +1,16 @@
 
 Pod::Spec.new do |s|
   s.name         = "PodTest"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "添加一个cocopods项目的测试" #简短的介绍
   s.description  = <<-DESC
-                   公有Pods测试
+                           PodTest测试添加cocopods项目
                    DESC
 
   s.homepage     = "https://github.com/JJloveLL/PodTest" #项目的链接
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
-  s.license      = "MIT (example)"  #开源协议
+  s.license      = "MIT"  #开源协议
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
   s.author             = { "JJloveLL" => "max_dengjiajun@163.com" } #作者
@@ -34,14 +34,21 @@ Pod::Spec.new do |s|
   ## 待测试通过完成后我们再发布指定release版本，使用如下方式
   s.source       = { :git => "https://github.com/JJloveLL/PodTest.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  #s.source_files = "HJGameSDK" #直接写文件夹名称即可
+  s.source_files  = "HJGameSDK/**/*.{h,m}"  #如果有多级目录, 一定要逐级添加. 这里也可以这么写:
+  #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
-
-  # s.resource  = "icon.png"
-  s.resources = "Resources/*.png"
+  #s.resource  = "icon.png"
+  s.resources = "HJGameSDK/Resource/icon_close@3x.png" #图片资源加载的路径
+  s.resources = "HJGameSDK/Resource/image_personal@2x.png" #图片资源加载的路径
+  s.resources = "HJGameSDK/Resource/image_personal3x.png" #图片资源加载的路径
+  s.resources = "HJGameSDK/Resource/image_switch@2x.png" #图片资源加载的路径
+  s.resources = "HJGameSDK/Resource/image_switch@3x.png" #图片资源加载的路径
+  s.resources = "HJGameSDK/Resource/image_welcome@2x.png" #图片资源加载的路径
+  s.resources = "HJGameSDK/Resource/image_welcome@3x.png" #图片资源加载的路径
+  # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
